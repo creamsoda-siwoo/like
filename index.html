@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>당신에게</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <main>
+      <div id="confession-card" class="card-container">
+        <h2 class="main-confession-text">좋아해</h2>
+        <p class="confession-phrase">내 모든 순간이 너로 물들었어.</p>
+      </div>
+    </main>
+
+    <section id="comments-section">
+      <form id="comment-form">
+        <div class="form-group">
+          <input type="text" id="name-input" placeholder="이름 (비워두면 '익명')" maxlength="20">
+          <textarea id="comment-input" placeholder="이 고백을 응원해주세요." rows="3" maxlength="150" required></textarea>
+        </div>
+        <button type="submit" aria-label="댓글 달기">댓글 달기</button>
+      </form>
+      <ul id="comment-list">
+        <!-- 댓글이 여기에 추가됩니다. -->
+      </ul>
+    </section>
+  </div>
+  <script type="module" src="index.tsx"></script>
+</body>
+</html>

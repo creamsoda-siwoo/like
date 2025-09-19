@@ -1,0 +1,164 @@
+
+:root {
+  --background-color: #fff0f5; /* Lavender Blush */
+  --background-heart: #ffe4e1; /* Misty Rose */
+  --card-background: rgba(255, 255, 255, 0.8);
+  --heart-color: #e91e63; /* Strong Pink/Red */
+  --text-color: #444;
+  --subtle-text-color: #777;
+  --input-background: rgba(255, 255, 255, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Yeon Sung', cursive;
+  background-color: var(--background-color);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 100 100'%3E%3Cpath d='M50,85 C25,60 25,25 50,45 C75,25 75,60 50,85 Z' fill='%23ffe4e1'/%3E%3C/svg%3E");
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+#app {
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.card-container {
+  background-color: var(--card-background);
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.1);
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-confession-text {
+  font-weight: 700;
+  font-size: 4rem;
+  color: var(--heart-color);
+  margin-bottom: 1.5rem;
+}
+
+.confession-phrase {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+/* Comments Section */
+#comments-section {
+  margin-top: 2rem;
+  background-color: var(--card-background);
+  padding: 1.5rem;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+#comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+#comment-form input,
+#comment-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--input-background);
+  font-family: 'Yeon Sung', cursive;
+  font-size: 1rem;
+  color: var(--text-color);
+  resize: vertical;
+}
+
+#comment-form input:focus,
+#comment-form textarea:focus {
+  outline: none;
+  border-color: var(--heart-color);
+  box-shadow: 0 0 0 2px rgba(233, 30, 99, 0.2);
+}
+
+#comment-form button {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--heart-color);
+  color: white;
+  font-family: 'Yeon Sung', cursive;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#comment-form button:hover {
+  background-color: #c2185b; /* Darker Pink */
+}
+
+#comment-list {
+  list-style: none;
+  margin-top: 1.5rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.comment-item {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.comment-item strong {
+  color: var(--heart-color);
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.comment-item p {
+  color: var(--text-color);
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .main-confession-text {
+    font-size: 3rem;
+  }
+  .confession-phrase {
+    font-size: 1.2rem;
+  }
+}
